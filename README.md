@@ -1,4 +1,4 @@
-#Exercises with Python
+# Exercises with Python
 
 Course: 'Curso Básico de Python' from Platzi.
 
