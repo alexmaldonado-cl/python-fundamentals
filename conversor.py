@@ -1,3 +1,17 @@
+valor_dolar = 724.40
+valor_uf = 29356.90
+valor_euro = 854.89
+
+
+def conversor(opcion, moneda):
+    pesos = input("¿Cuántos pesos tienes?:  ")
+    pesos = float(pesos)
+    resultado = pesos / moneda
+    resultado = round(resultado, 2)
+    resultado = str(resultado)
+    return resultado
+
+
 menu = """
 Bienvenido al conversor de monedas 💰
 
@@ -14,28 +28,13 @@ Elige un opción:
 opcion = int(input(menu))
 
 if opcion == 1:
-    pesos = input("¿Cuántos pesos tienes?:  ")
-    pesos = float(pesos)
-    valor_dolar = 724.40
-    dolares = pesos / valor_dolar
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-    print("Tienes $" + dolares + " dólares")
+    resultado = conversor(opcion, valor_dolar)
+    print('Tienes $'+resultado+' dólares')
 elif opcion == 2:
-    pesos = input("¿Cuántos pesos tienes?:  ")
-    pesos = float(pesos)
-    valor_uf = 29356.90
-    dolares = pesos / valor_uf
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-    print("Tienes " + dolares + " UF")
+    resultado = conversor(opcion, valor_uf)
+    print('Tienes '+resultado+' UF')
 elif opcion == 3:
-    pesos = input("¿Cuántos pesos tienes?:  ")
-    pesos = float(pesos)
-    valor_euro = 854.89
-    dolares = pesos / valor_euro
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-    print("Tienes " + dolares + " euros")
+    resultado = conversor(opcion, valor_euro)
+    print('Tienes '+resultado+' euros')
 else:
     print('Ingresa una opción correcta')
